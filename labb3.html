@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		lab3
+	</title>
+	<style>
+	
+	p {
+    background-color: #f6b319;
+}
+	
+      nav.headi{
+		
+		overflow: hidden;
+
+        background-color: #f6b319;
+		box
+      }
+	  button{
+		background-color : #f6b319;
+	  }
+	  </style>
+	  
+<script >
+
+	function ra(){
+		var base = document.getElementById("side1").value;
+		var height = document.getElementById("side2").value;
+		document.getElementById("output").innerHTML = 
+		"Area of Rectangle:<input type=\"number\" value="+base*height +"><br><br>Perimeter of Rectangle:<input type=\"number\" value="+(2*height+ 2*base) +">";	
+	}
+
+	function ca(){
+		var rad = document.getElementById("radius").value;
+		document.getElementById("output").innerHTML = "Area of Circle:<input type=\"number\" value="+rad*rad*(22/7) +"><br><br>Perimeter of Circle:<input type=\"number\" value="+2*(22/7)*rad+">";
+	}
+	
+	function im3_dis() {
+		document.getElementById("output").innerHTML = "";
+		document.getElementById("input").innerHTML = "<img src=\"r.jpg\" width=\"400\" height=\"275\"><br><br><br>Enter length:<input type=\"number\" id=\"side1\" value=0><br><br> Enter width :&nbsp<input type=\"number\" id=\"side2\" value=0>&nbsp&nbsp<br><input type=\"button\" value=\"Submit\" onclick=\"ra();\" >";
+			
+	}
+	function im4_dis() {
+		document.getElementById("output").innerHTML = "";
+		document.getElementById("input").innerHTML = "<img src=\"triangle.png\" width=\"275\" height=\"275\"><br><br><br>Enter base:&nbsp&nbsp&nbsp<input type=\"number\" id=\"base\" value=0>&nbsp&nbsp<br><input type=\"button\" value=\"Submit\" onclick=\"ta();\" >";
+		
+	}
+	function ta(){
+		var base = document.getElementById("base").value;
+		document.getElementById("output").innerHTML = "Area   of   Triangle:<input type=\"number\" value="+base*(1/2)*(1.7/2)*base +"><br><br>Perimeter of Triangle:<input type=\"number\" value="+3*base+">";
+	}
+
+	function im2_dis() {
+		document.getElementById("output").innerHTML = "";
+		document.getElementById("input").innerHTML = "<img src=\"square.png\" width=\"275\" height=\"275\"><br><br><br>Enter side length:<input type=\"number\" id=\"length\" value=0>&nbsp&nbsp<br><input type=\"button\" value=\"Submit\" onclick=\"sa();\">";
+		
+	}
+	
+	function im1_dis() {
+		document.getElementById("output").innerHTML = "";
+		document.getElementById("input").innerHTML = "<img src=\"circle.png\" width=\"275\" height=\"275\"><br><br><br>Enter Radius:<input type=\"number\" id=\"radius\" value=0>&nbsp&nbsp<br><input type=\"button\" value=\"Submit\" onclick=\"ca();\" >";
+	}
+	
+	
+	function sa(){
+		var length = document.getElementById("length").value;
+		document.getElementById("output").innerHTML = "Area of Square:<input type=\"number\" value="+ length*length +"><br><br>Perimeter of Square:<input type=\"number\" value="+4*length+">";
+	}
+
+</script>
+
+	  
+</head>
+<body style="background-color:#61122f">
+<nav class="headi">
+    <h1 align = "center">SHAPES</h1>
+
+</nav>
+<table width="100%" >
+	<tr align = "center"> 
+				<th valign = "middle"><button onclick="im2_dis()">Square</button></td>
+						<td valign = "middle"><button onclick="im4_dis()">Triangle</button></td>
+
+		<th valign = "center"><button onclick="im1_dis()" color ="blue" align ="center">Circle</button></td>
+
+		<td valign = "middle"><button onclick="im3_dis()">Rectangle</button></td>
+
+	</tr>
+</table>
+		<br><br>
+		<nav style="background-color: #f6b319; height='500px'" ><nav>
+		<p id="input" align = "center" style="font-size:100%;"></p>
+		<p id="output" align = "center"></p>
+
+
+</body>
+</html>
